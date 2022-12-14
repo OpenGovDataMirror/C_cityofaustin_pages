@@ -1,0 +1,16 @@
+general:
+  branches:
+    only:
+      - master
+
+test:
+  override:
+    - echo "no-op"
+
+deployment:
+  pages:
+    branch:
+      - master
+      - gh-pages
+    commands:
+      - api/deploy.sh
